@@ -16,6 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".DietActivity" />
+        <activity android:name=".DietInformationActivity" />
+        <activity android:name=".UpdateUserActivity" />
+        <activity android:name=".DietVideoActivity"></activity>
     </application>
 
 </manifest>

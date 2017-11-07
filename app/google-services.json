@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "625169007841",
+    "firebase_url": "https://mydiet-8de45.firebaseio.com",
+    "project_id": "mydiet-8de45",
+    "storage_bucket": "mydiet-8de45.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:625169007841:android:3ef5ca3ad6f3164d",
+        "android_client_info": {
+          "package_name": "com.example.company.mydiet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "625169007841-1mga0luag4heb6m0tjstom8lknkfbtkp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.company.mydiet",
+            "certificate_hash": "a11b3ae784619be1179c56a7d85630e289b3172d"
+          }
+        },
+        {
+          "client_id": "625169007841-1066ovachrbeuu2e68jp40f8vq7eb04a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4ws3OSmZ8hFsUBLKUYHEGFwgy1rOdHs0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "625169007841-1066ovachrbeuu2e68jp40f8vq7eb04a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
