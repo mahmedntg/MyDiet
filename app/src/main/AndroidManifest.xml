@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.company.mydiet">
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,11 +18,32 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".DietActivity" />
-        <activity android:name=".DietInformationActivity" />
-        <activity android:name=".UpdateUserActivity" />
-        <activity android:name=".DietVideoActivity"></activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:label="User Registration"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".DietActivity"
+            android:label="My Diet"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".DietInformationActivity"
+            android:label="Diet Information"
+            android:parentActivityName=".DietActivity" />
+        <activity
+            android:name=".UpdateUserActivity"
+            android:label="Update Information"
+            android:parentActivityName=".DietActivity" />
+        <activity
+            android:name=".DietVideoActivity"
+            android:label="Youtube Videos"
+            android:parentActivityName=".DietActivity"></activity>
+
+        <receiver android:name=".utils.AlarmReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

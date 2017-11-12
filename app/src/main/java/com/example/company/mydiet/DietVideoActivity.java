@@ -17,7 +17,7 @@ import com.google.android.youtube.player.YouTubePlayerView;
 public class DietVideoActivity extends YouTubeBaseActivity implements
         YouTubePlayer.OnInitializedListener {
     private static final int RECOVERY_DIALOG_REQUEST = 1;
-
+    private String diet;
     // YouTube player view
     private YouTubePlayerView youTubeView;
 
@@ -27,9 +27,8 @@ public class DietVideoActivity extends YouTubeBaseActivity implements
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activity_diet_video);
+        diet = getIntent().getStringExtra("diet");
         youTubeView = (YouTubePlayerView) findViewById(R.id.youtube_view);
 
         // Initializing video player with developer key
@@ -56,10 +55,20 @@ public class DietVideoActivity extends YouTubeBaseActivity implements
 
             // loadVideo() will auto play video
             // Use cueVideo() method, if you don't want to play it automatically
-            player.loadVideo(Config.YOUTUBE_VIDEO_CODE);
+            String youtubeCode = "";
+            if (diet.equals("1")) {
+                youtubeCode = Config.YOUTUBE_VIDEO_CODE_1;
+            } else if (diet.equals("2")) {
+                youtubeCode = Config.YOUTUBE_VIDEO_CODE_2;
+            } else if (diet.equals("3")) {
+                youtubeCode = Config.YOUTUBE_VIDEO_CODE_3;
+            } else {
+                youtubeCode = Config.YOUTUBE_VIDEO_CODE_1;
+            }
+            player.loadVideo(youtubeCode);
 
             // Hiding player controls
-            player.setPlayerStyle(PlayerStyle.CHROMELESS);
+           // player.setPlayerStyle(PlayerStyle.CHROMELESS);
         }
     }
 

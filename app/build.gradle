@@ -3,9 +3,9 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         config {
-            keyAlias 'android'
-            keyPassword 'android'
-            storeFile file('C:/Users/Mohamed Sayed/.android/debug.keystore')
+            keyAlias 'diet'
+            keyPassword 'android1'
+            storeFile file('C:/Users/Mohamed Sayed/.android/diet.jks')
             storePassword 'android'
         }
     }
@@ -44,6 +44,7 @@ dependencies {
     compile 'com.google.firebase:firebase-storage:10.0.1'
     compile 'com.android.support:recyclerview-v7:25.3.1'
     testCompile 'junit:junit:4.12'
+    compile files('libs/YouTubeAndroidPlayerApi.jar')
 }
 
 
