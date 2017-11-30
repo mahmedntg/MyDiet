@@ -19,6 +19,7 @@ import android.widget.TextView;
 
 import com.example.company.mydiet.utils.AlarmReceiver;
 import com.example.company.mydiet.utils.DateUtil;
+import com.example.company.mydiet.utils.Gender;
 import com.example.company.mydiet.utils.MyAlertDialog;
 import com.example.company.mydiet.utils.MySharedPreferences;
 import com.example.company.mydiet.utils.User;
@@ -43,7 +44,7 @@ public class DietActivity extends AppCompatActivity {
     private DatabaseReference databaseReference;
     private DatabaseReference motivationReference;
     private FirebaseStorage firebaseStorage;
-    private TextView pmiET;
+    private TextView pmiET,desiredTV;
     ImageView imageView;
     String dietImage;
     private ProgressDialog progressDialog;
@@ -83,6 +84,7 @@ public class DietActivity extends AppCompatActivity {
         goToDietBtn = (Button) findViewById(R.id.goToDietBtn);
         videosBtn = (Button) findViewById(R.id.videosBtn);
         pmiET = (TextView) findViewById(R.id.pmiET);
+        desiredTV = (TextView) findViewById(R.id.desiredTV);
         imageView = (ImageView) findViewById(R.id.dietImage);
         progressDialog.setMessage(getString(R.string.loading_diet));
         progressDialog.show();
@@ -107,6 +109,13 @@ public class DietActivity extends AppCompatActivity {
 
                 double height = Double.parseDouble(user.getHeight());
                 double weight = Double.parseDouble(user.getWeight());
+                Gender gender = Gender.valueOf(user.getGender().toUpperCase());
+                if (gender.equals(Gender.FEMALE)) {
+                   desiredTV.setText("Desired Weight: "+(height-110));
+                }
+                else{
+                    desiredTV.setText("Desired Weight: "+(height-100));
+                }
                 DecimalFormat df = new DecimalFormat("#.##");
                 double PMI = weight / (Math.pow((height / 100), 2));
                 pmiET.setText("PMI= " + df.format(PMI));
