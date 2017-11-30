@@ -176,6 +176,8 @@ public class DietActivity extends AppCompatActivity {
             calendar.clear();
             calendar.set(Calendar.HOUR_OF_DAY, 10);
             calendar.set(Calendar.MINUTE, 30);
+            // AlarmManager.INTERVAL_DAY instead of 10000
+            //calendar.getTimeInMillis() instead of System.currentTimeMillis()
             manager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 10000, pendingIntent);
         } else {
             manager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), pendingIntent);
@@ -194,6 +196,8 @@ public class DietActivity extends AppCompatActivity {
         calendar.clear();
         calendar.set(Calendar.HOUR_OF_DAY, 10);
         calendar.set(Calendar.MINUTE, 30);
+        // AlarmManager.INTERVAL_DAY instead of 10000
+        //calendar.getTimeInMillis() instead of System.currentTimeMillis()
         manager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 10000, pendingIntent);
     }
 }

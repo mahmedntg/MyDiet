@@ -41,7 +41,7 @@ public class DietAdapter extends RecyclerView.Adapter<DietAdapter.MyViewHolder> 
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView name, quantity, price;
+        public TextView name;
 
         public MyViewHolder(View view) {
             super(view);
