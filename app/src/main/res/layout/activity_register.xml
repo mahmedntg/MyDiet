@@ -4,183 +4,234 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.company.mydiet.RegisterActivity">
 
-    <TableLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/table_margin"
-        android:padding="@dimen/table_padding"
-        android:stretchColumns="1">
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/table_padding">
 
-        <TableRow>
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/tableColumnText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name" />
 
-            <TextView
-                android:id="@+id/textView3"
-                style="@style/tableColumnText"
+        <EditText
+            android:id="@+id/edit_name"
+            style="@style/editTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/table_padding">
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/tableColumnText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gender" />
+
+        <RadioGroup
+            android:id="@+id/genderRG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/maleRadioBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/name" />
+                android:text="Male" />
 
-            <EditText
-                android:id="@+id/edit_name"
-                style="@style/editTextStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:id="@+id/textView2"
-                style="@style/tableColumnText"
+            <RadioButton
+                android:id="@+id/femaleRadioBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/gender" />
+                android:text="Female" />
+        </RadioGroup>
+    </LinearLayout>
 
-            <RadioGroup
-                android:id="@+id/genderRG"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
-                <RadioButton
-                    android:id="@+id/maleRadioBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Male"  />
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/table_padding">
 
-                <RadioButton
-                    android:id="@+id/femaleRadioBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Female" />
-            </RadioGroup>
-        </TableRow>
+        <TextView
+            android:id="@+id/textView11"
+            style="@style/tableColumnText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/weight" />
 
-        <TableRow>
+        <EditText
+            android:id="@+id/edit_weight"
+            style="@style/editTextStyle.numberDecimalStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView11"
-                style="@style/tableColumnText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/weight" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
-            <EditText
-                android:id="@+id/edit_weight"
-                style="@style/editTextStyle.numberDecimalStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </TableRow>
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/table_padding">
 
-        <TableRow>
+        <TextView
+            android:id="@+id/textView5"
+            style="@style/tableColumnText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/height" />
 
-            <TextView
-                android:id="@+id/textView5"
-                style="@style/tableColumnText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/height" />
+        <EditText
+            android:id="@+id/edit_height"
+            style="@style/editTextStyle.numberDecimalStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
-            <EditText
-                android:id="@+id/edit_height"
-                style="@style/editTextStyle.numberDecimalStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </TableRow>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
-        <TableRow>
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/table_padding">
 
-            <TextView
-                android:id="@+id/textView6"
-                style="@style/tableColumnText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/waist" />
+        <TextView
+            android:id="@+id/textView6"
+            style="@style/tableColumnText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/waist" />
 
-            <EditText
-                android:id="@+id/edit_waist"
-                style="@style/editTextStyle.numberDecimalStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </TableRow>
+        <EditText
+            android:id="@+id/edit_waist"
+            style="@style/editTextStyle.numberDecimalStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
-        <TableRow>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
-            <TextView
-                android:id="@+id/textView7"
-                style="@style/tableColumnText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/age" />
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/table_padding">
 
-            <EditText
-                android:id="@+id/edit_age"
-                style="@style/editTextStyle.numberStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </TableRow>
+        <TextView
+            android:id="@+id/textView7"
+            style="@style/tableColumnText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/age" />
 
-        <TableRow>
+        <EditText
+            android:id="@+id/edit_age"
+            style="@style/editTextStyle.numberStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView8"
-                style="@style/tableColumnText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/userName" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
-            <EditText
-                android:id="@+id/edit_userName"
-                style="@style/editTextStyle.emailStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </TableRow>
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/table_padding">
 
-        <TableRow>
+        <TextView
+            android:id="@+id/textView8"
+            style="@style/tableColumnText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/userName" />
 
-            <TextView
-                android:id="@+id/textView9"
-                style="@style/tableColumnText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/password" />
+        <EditText
+            android:id="@+id/edit_userName"
+            style="@style/editTextStyle.emailStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
-            <EditText
-                android:id="@+id/edit_password"
-                style="@style/editTextStyle.passwordStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </TableRow>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
-        <TableRow>
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/table_padding">
 
-            <TextView
-                android:id="@+id/textView10"
-                style="@style/tableColumnText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/confirm_password" />
+        <TextView
+            android:id="@+id/textView9"
+            style="@style/tableColumnText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/password" />
 
-            <EditText
-                android:id="@+id/edit_confirm_password"
-                style="@style/editTextStyle.passwordStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </TableRow>
+        <EditText
+            android:id="@+id/edit_password"
+            style="@style/editTextStyle.passwordStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
-        <TableRow>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
-            <Button
-            android:background="@color/buttonColor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="200dp"
-                android:layout_marginTop="20dp"
-                android:layout_span="2"
-                android:onClick="registerUserBtnClicked"
-                android:text="@string/register" />
-        </TableRow>
-    </TableLayout>
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal"
+        android:padding="@dimen/table_padding">
+
+        <TextView
+            android:id="@+id/textView10"
+            style="@style/tableColumnText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm_password" />
+
+        <EditText
+            android:id="@+id/edit_confirm_password"
+            style="@style/editTextStyle.passwordStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/buttonColor"
+        android:onClick="registerUserBtnClicked"
+        android:text="@string/register" />
 </LinearLayout>
